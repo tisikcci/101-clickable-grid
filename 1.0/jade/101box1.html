@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>101box</title>
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+  </head>
+  <body>
+    <div id="article" class="article">
+      <div class="header">
+        <div class="header-bar">
+          <p> <span>请输入单边格子数：</span>
+            <input type="text" name="cell_name" id="number">
+            <input type="button" value="确定" onclick="showCell()">
+            <input type="button" value="重置" onclick="resetCell()">
+          </p>
+        </div>
+      </div>
+      <div id="main" class="main">
+        <div id="cell-weapper" class="cell-wraper"></div>
+      </div>
+      <div class="footer"></div>
+    </div>
+    <script type="text/javascript" src="../js/util.js"> </script>
+  </body>
+</html>

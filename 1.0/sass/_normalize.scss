@@ -1,0 +1,44 @@
+html,
+body,
+div,
+dt,
+dd,
+dl,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+a,
+p
+{
+    font-family: 'Helvetical Neue', Helvetical, Arial, sans-self;
+
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol,
+li
+{
+    list-style: none;
+}
+
+a
+{
+    display: block;
+
+    text-decoration: none;
+
+    color: #fff;
+}
+
+img
+{
+    display: block;
+
+    border: none;
+}

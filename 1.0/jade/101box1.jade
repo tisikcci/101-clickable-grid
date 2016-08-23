@@ -1,0 +1,19 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title 101box
+		link(rel="stylesheet" type="text/css" href="../css/layout.css")
+	body
+		.article#article
+			.header
+				.header-bar
+					p 
+						span 请输入单边格子数：
+						input(type="text" name="cell_name" id="number")
+						input(type="button" value="确定" onclick="showCell()")
+						input(type="button" value="重置" onclick="resetCell()")
+			.main#main
+				.cell-wraper#cell-weapper
+			.footer
+		script(type="text/javascript" src="../js/util.js") 

@@ -1,0 +1,62 @@
+@import 'normalize';
+@import 'variables';
+
+.article
+{
+    width: $article-width;
+    height: $article-height;
+    margin: $article-margin;
+
+    border: $article-border;
+    background-color: $article-bgcolor;
+}
+
+.header
+{
+    font-size: $header-font-size;
+    font-weight: $header-font-weight;
+
+    height: $header-height;
+
+    color: $header-color;
+    border: $header-border;
+    background-color: $header-bgcolor;
+    .header-bar
+    {
+        padding-top: $header-bar-padding-top;
+
+        text-align: $header-content-style;
+        span
+        {
+            margin-right: $header-p-margin;
+        }
+    }
+}
+
+.main
+{
+    width: $main-width;
+    height: $main-height;
+    margin-top: $main-margin-tb;
+    margin-right: $main-margin-lr;
+    margin-left: $main-margin-lr;
+
+    background-color: $main-bgcolor;
+    .cell-wraper
+    {
+        display: $cell-wraper-display;
+
+        justify-content: $cell-justify-content;
+        // flex-direction: column;
+        flex-wrap: $cell-flex-wrap;
+        align-items: $cell-align-items;
+        .cell
+        {
+            text-align: $cell-text;
+
+            color: #3c3cc3;
+            border: $cell-border;
+            background-color: $cell-bgcolor;
+        }
+    }
+}

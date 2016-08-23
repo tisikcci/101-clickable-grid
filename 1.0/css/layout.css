@@ -1,0 +1,72 @@
+html,
+body,
+div,
+dt,
+dd,
+dl,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+a,
+p {
+  font-family: 'Helvetical Neue', Helvetical, Arial, sans-self;
+  margin: 0;
+  padding: 0; }
+
+ul,
+ol,
+li {
+  list-style: none; }
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #fff; }
+
+img {
+  display: block;
+  border: none; }
+
+.article {
+  width: 544px;
+  height: 600px;
+  margin: 50px auto;
+  border: none;
+  background-color: #ccc; }
+
+.header {
+  font-size: 16px;
+  font-weight: bold;
+  height: 58.2px;
+  color: #000;
+  border: 2px solid #000;
+  background-color: #0016b5; }
+  .header .header-bar {
+    padding-top: 20.37px;
+    text-align: center; }
+    .header .header-bar span {
+      margin-right: 30px; }
+
+.main {
+  width: 540px;
+  height: 538px;
+  margin-top: 1px;
+  margin-right: 2px;
+  margin-left: 2px;
+  background-color: #e0e0e0; }
+  .main .cell-wraper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center; }
+    .main .cell-wraper .cell {
+      text-align: center;
+      color: #3c3cc3;
+      border: 1px solid #000;
+      background-color: #55c0fc; }
+
+/*# sourceMappingURL=layout.css.map */
