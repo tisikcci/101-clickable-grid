@@ -1,6 +1,11 @@
+//1.0
+//
+var clickBoolean = false;
+
 function showCell(){
 	var num=document.getElementById("number").value;
 	if(isPostiveNum(num)&&num>0&&num<37){
+		clickBoolean = true;
 		drowCell(num);
 	}else{
 		alert("请输入大于0小于37的正整数");
@@ -51,7 +56,6 @@ function setCellWidth(num,className){
 		classCell[i].style.width=width + "px";
 		classCell[i].style.height=height + "px";
 		classCell[i].style.fontSize= fontSize + "px";
-		// classCell[i].style.backgroundColor="#55C0FC";
 	}
 }
 
@@ -91,3 +95,93 @@ window.onload=function(){
 		};
 	});
 }
+
+//*********************************************************
+//1.1
+//
+function showRandomCell(){
+	var num=document.getElementById("number").value;
+	if(isPostiveNum(num)&&num>0&&num<37){
+		clickBoolean = true;
+		drowRandomCell(num);
+	}else{
+		alert("请输入大于0小于37的正整数");
+	}
+}
+
+function drowRandomCell(num){
+	var fragment=document.createDocumentFragment(),
+		div=document.getElementById("cell-weapper");
+	var b=randomNum(num);
+	var cell=null,
+		i,
+		j;
+    div.innerHTML="";
+	for(i=0;i<num;i++){
+		for(j=0;j<num;j++){
+			cell=document.createElement("div");
+			cell.appendChild(document.createTextNode(b[i * num + j]));
+			cell.setAttribute("class","cell");
+			fragment.appendChild(cell);
+		}	
+	}
+	div.appendChild(fragment);
+	setCellWidth(num,".cell");
+}
+
+function randomNum(num){
+	var a=[],
+		b=[],
+		i,
+		j;
+	var num2= num * num;
+	for(i=0;i<num2;i++){
+		a[i]=i+1;
+	}
+	for(j=0;j<num2;j++){
+		b.push(a.splice(Math.floor(Math.random()*a.length),1));
+	}
+	return b;
+}
+
+//getCell
+//
+function getCell(){
+	var i,
+		c,
+		len,
+		num,
+		classCell,
+		num=document.getElementById("number").value;
+		cellContent = document.getElementById("cell-weapper").innerHTML;
+	if(cellContent){
+		if(clickBoolean){
+			clickBoolean = false;
+			c=getLittleNum(num);
+			classCell=document.querySelectorAll(".cell");
+			for(i=0,len=c.length;i<len;i++){
+				classCell[c[i]].style.backgroundColor= "#FF262E";
+			}
+		}else{
+			return;
+		}
+	}else{
+		alert("请先分割格子");
+	}
+}
+
+function getLittleNum(num){
+	var littleNum,
+		num2,
+		i,
+		b,
+		c=[];
+	b = randomNum(num);
+	num2 = num * num;
+	littleNum = Math.floor(num2*0.15);
+	for(i=0;i<littleNum;i++){
+		c.push(b.splice(Math.floor(Math.random()*b.length),1));
+	}
+	return c;
+}
+
