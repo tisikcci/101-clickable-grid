@@ -4,11 +4,11 @@ var clickBoolean = false;
 
 function showCell(){
 	var num=document.getElementById("number").value;
-	if(isPostiveNum(num)&&num>0&&num<37){
+	if(isPostiveNum(num)&&num>0&&num<26){
 		clickBoolean = true;
 		drowCell(num);
 	}else{
-		alert("请输入大于0小于37的正整数");
+		alert("请输入大于0小于26的正整数");
 	}
 }
 
@@ -101,11 +101,11 @@ window.onload=function(){
 //
 function showRandomCell(){
 	var num=document.getElementById("number").value;
-	if(isPostiveNum(num)&&num>0&&num<37){
+	if(isPostiveNum(num)&&num>0&&num<26){
 		clickBoolean = true;
 		drowRandomCell(num);
 	}else{
-		alert("请输入大于0小于37的正整数");
+		alert("请输入大于0小于26的正整数");
 	}
 }
 
