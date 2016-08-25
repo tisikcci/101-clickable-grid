@@ -27,3 +27,6 @@ git checkout -b 'myBranchName'
 - 使用了css使用了flex，js使用event delegation
 - 使用了flex兼容性较差，只能兼容到IE11
 
+1.1版：
+- 添加了数字随机分布功能，点击随机分布就能实现
+- 添加了随机选定一定数量格子功能（类似于布雷），数量和n相关，点击设定就能实现
